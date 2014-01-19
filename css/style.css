@@ -23,7 +23,7 @@ form {
 	margin-top: 15%;
 }
 fieldset {
-	width: 200px;
+	width: 300px;
 	border: none;
 }
 nav ul {
@@ -32,6 +32,9 @@ nav ul {
 }
 nav ul li:nth-child(1) a:before {
 	content: url("../img/about.png");
+}
+nav li.on a {
+	text-decoration: underline;
 }
 nav ul li a {
 	text-decoration: none;

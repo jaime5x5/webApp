@@ -1,19 +1,23 @@
+
 <?php 
 $pageTitle = "Contact Me";
 $section = "contact";
-include('inc/header.php'); ?>
-<form name="contactInfo" id="contactInfo" action="success.html" method="post" onsubmit="return validateForm()">
+include('inc/header.php'); 
+?>
+<form name="contactInfo" id="contactInfo" action="process.php" method="post" onsubmit="return validateForm()">
   <fieldset>
     <legend>Contact Information</legend>
-    <label class="name" for="name">Name: <input type="text" name="ContactName" size="" ></label><br />
-    <label class="address">Mailing Address: </label><br />
-    <textarea name="contactAddress" rows="5" cols="20"></textarea><br />
-    <label class="status" for="status">Status</label><br />
-    <input type="radio" name="status" id="freshRadio" /><label class="freshman" for="freshman">Freshman</label><br />
-    <input type="radio" name="status" id="sophRadio" /><label class="sophmore" for="sophmore">Sophmore</label><br />
-    <input type="radio" name="status" id="junRadio" /><label class="junior" for="junior">Junior</label><br />
-    <input type="radio" name="status" id="senRadio" /><label class="senior" for="senior">Senior</label><br /><br />
-    <input type="checkbox" name="majorDeclared" id="majorDec" /><label class="major" for="majorDeclared">Major Declared?</label><br /><br />
+    <label for="name">Please enter your full name: <input type="text" name="ContactName" size="" ></label><br />
+    <label for="gender">Please enter your gender: </label><br />
+    <input type="radio" name="gender" id="male" value="male" /><label for="male">Male</label><br />
+    <input type="radio" name="gender" id="female" value="female" /><label for="female">Female</label><br />
+    <label for="position">Please select your class status: </label><br />
+    <input type="radio" name="position" id="freshman" value="freshman"/><label for="freshman">Freshman</label><br />
+    <input type="radio" name="position" id="sophmore" value="sophmore" /><label for="sophmore">Sophmore</label><br />
+    <input type="radio" name="position" id="junior" value="junior"/><label for="junior">Junior</label><br />
+    <input type="radio" name="position" id="senior" value="senior"/><label for="senior">Senior</label><br /><br />
+    <label for="contactNotes">Notes: </label><br />
+    <textarea name="contactNotes" rows="5" cols="25"></textarea><br />
     <button type="submit" value="submit">Submit</button>
   </fieldset>
 </form>
@@ -26,24 +30,24 @@ include('inc/header.php'); ?>
       alert("Name must be filled out");
       return false;
       }
-    var y=document.forms.contactInfo.contactAddress.value;
-    if (y===null || y==="")
-      {
-      alert("Mailing Address must be filled out");
-      return false;
-      }
-    if ( ( contactInfo.status[0].checked === false ) && ( contactInfo.status[1].checked === false )  && ( contactInfo.status[2].checked === false ) && ( contactInfo.status[3].checked === false )) 
+    if ( ( contactInfo.gender[0].checked === false ) && ( contactInfo.gender[1].checked === false )) 
     {
       alert 
-       ( "Please select you Status" ); 
+       ( "Please select you gender." ); 
         return false;
     }
-    if ( ( contactInfo.majorDeclared.checked === false )) 
+    if ( ( contactInfo.position[0].checked === false ) && ( contactInfo.position[1].checked === false )  && ( contactInfo.position[2].checked === false ) && ( contactInfo.position[3].checked === false )) 
     {
       alert 
-       ( "Please select you Major" ); 
+       ( "Please select your class status." ); 
         return false;
-    }else {
+    }
+    var y=document.forms.contactInfo.contactNotes.value;
+    if (y===null || y==="")
+      {
+      alert("You must enter a comment.");
+      return false;
+      }else {
       alert ('Nicely done');
     }
   }

@@ -24,8 +24,8 @@
 			<h1><?php echo $pageTitle; ?></h1>
 			<nav>
 				<ul>
-				  <li><a href="#">About</a></li>
-				  <li><a href="contact.php">Contact</a></li>
+				  <li class="about <?php if ($section == "about") {echo "on"; } ?>"><a href="about.php">About</a></li>
+				  <li class="contact <?php if ($section == "contact") {echo "on"; } ?>"><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>		
 		</header>
