@@ -13,6 +13,8 @@
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="//use.typekit.net/apu4wot.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
 <body>
