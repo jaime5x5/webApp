@@ -21,11 +21,11 @@
 			<div class="logo">
 				<a href="index.php" ><img src="img/jaime_logo.jpg"></a>
 			</div>
-			<h1><?php echo $pageTitle; ?></h1>
 			<nav>
 				<ul>
 				  <li class="about <?php if ($section == "about") {echo "on"; } ?>"><a href="about.php">About</a></li>
 				  <li class="contact <?php if ($section == "contact") {echo "on"; } ?>"><a href="contact.php">Contact</a></li>
 				</ul>
-			</nav>		
+			</nav>
+			<h1><?php echo $pageTitle; ?></h1>		
 		</header>
