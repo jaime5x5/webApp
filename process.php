@@ -18,11 +18,11 @@ $pageTitle = "Form Processor";
 $section = "process";
 include('inc/header.php'); ?>
 <article>
-  <div class="welcome">
-    <h1>Welcome <?php echo $name;?></h1>
-    <p>Your gender is: <?php echo $gender;?></p>
-    <p>Your class status is: <?php echo $position;?></p>
-    <p>Your notes are: <?php echo $notes;?></p>
+  <div class="process">
+    <h1><strong>Welcome </strong> <?php echo $name;?></h1>
+    <p><strong>Your gender is: </strong><?php echo $gender;?></p>
+    <p><strong>Your class status is: </strong><?php echo $position;?></p>
+    <p><strong>Your notes are: </strong><?php echo $notes;?></p>
   </div>
 
 </article>

@@ -126,6 +126,17 @@ footer ul li:nth-child(3) a:before {
 	padding: 20px;
 	border-radius: 10px;
 }
+.process {
+	float: left;
+	width: 65%;
+	background: url("../img/lined_paper.png");
+	padding: 20px;
+	border-radius: 10px;
+}
+.process p {
+	background-color: red;
+	padding: 20px;
+}
 
 @media (min-width: 1240px) {
 	footer {
