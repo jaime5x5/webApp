@@ -7,16 +7,16 @@ include('inc/header.php');
 <form name="contactInfo" id="contactInfo" action="process.php" method="post" onsubmit="return validateForm()">
   <fieldset>
     <legend>Contact Information</legend>
-    <label for="name">Please enter your full name: <input type="text" name="ContactName" size="" ></label><br />
-    <label for="gender">Please enter your gender: </label><br />
+    <label for="name"><strong>Please enter your full name: </strong><input type="text" name="ContactName" size="" ></label><br />
+    <label for="gender"><strong>Please enter your gender: </strong></label><br />
     <input type="radio" name="gender" id="male" value="male" /><label for="male">Male</label><br />
     <input type="radio" name="gender" id="female" value="female" /><label for="female">Female</label><br />
-    <label for="position">Please select your class status: </label><br />
+    <label for="position"><strong>Please select your class status: </strong></label><br />
     <input type="radio" name="position" id="freshman" value="freshman"/><label for="freshman">Freshman</label><br />
     <input type="radio" name="position" id="sophmore" value="sophmore" /><label for="sophmore">Sophmore</label><br />
     <input type="radio" name="position" id="junior" value="junior"/><label for="junior">Junior</label><br />
     <input type="radio" name="position" id="senior" value="senior"/><label for="senior">Senior</label><br /><br />
-    <label for="contactNotes">Notes: </label><br />
+    <label for="contactNotes"><strong>Notes: </strong></label><br />
     <textarea name="contactNotes" rows="5" cols="25"></textarea><br />
     <button type="submit" value="submit">Submit</button>
   </fieldset>
