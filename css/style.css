@@ -1,11 +1,38 @@
 body {
+	font-family: "john-doe",serif;
+}
+/*-------------------------
+backgrounds
+-------------------------*/
+.homeBodyBg {
 	background-image:url('../img/bg3.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
-	font-family: "john-doe",serif;
 }
+.contactBodyBg {
+	background-image:url('../img/bg6.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.aboutBodyBg {
+	background-image:url('../img/bg4.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.asgnBodyBg {
+	background-image:url('../img/bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
 h1 {
 	font-family: "source-sans-pro",sans-serif;
 }
@@ -20,12 +47,24 @@ header h1 {
 nav{
 	margin-left: 20%;
 }
-form {
+.contactinfo {
 	float: left;
 	width: 350px;
 	background: url("../img/lined_paper.png");
 	background-color: white;
 	margin-top: 15%;
+}
+
+.asgn4form {
+	float: left;
+	width: 350px;
+	background: url("../img/lined_paper.png");
+	background-color: white;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.assignments4 img {
+	width: 75%;
 }
 legend {
 	color: #1A1A1A;
@@ -45,11 +84,15 @@ label {
 	padding: 10px 0 10px 10px;
 }
 nav ul {
+	margin: 0 -20% 0 0;
 	list-style-type: none;
-	margin-right: 5%;
+    white-space: nowrap;
+    z-index: 1;
 }
-nav ul li:nth-child(1) a:before {
-	content: url("../img/about.png");
+nav ul li {
+	float: right;
+	padding: 20px;
+	position: relative;
 }
 nav li.on a {
 	text-decoration: underline;
@@ -61,13 +104,30 @@ nav ul li a {
 	font-family: "droid-sans",sans-serif;
 	padding-bottom: 10px;
 }
+nav ul li:hover { 
+	text-shadow: 0 0 10px #000; 
+}
+
+nav ul li:hover > ul {
+	display: block;
+	font-size: .5em;
+  left: auto;
+  padding-top: 5px;
+  min-width: 100%;
+}
+nav ul li:hover > ul li a:before {
+  width: 20%;
+}
+nav ul li:nth-child(1) a:before {
+	content: url("../img/about.png");
+}
 nav ul li:nth-child(2) a:before {
 	content: url("../img/contact.png");
 }
-nav ul li {
-	float: right;
-	padding: 20px;
+nav ul li:nth-child(3) a:before {
+	content: url("../img/assignments.png");
 }
+
 footer {
 	clear: both;
    	width: 65%;
@@ -101,6 +161,9 @@ footer ul li:nth-child(2) a:before {
 footer ul li:nth-child(3) a:before {
 	content: url("../img/youtube.png");
 }
+footer ul li:nth-child(4) a:before {
+	content: url("../img/google-plus.png");
+}
 .container {
 	width: 70%;
 	height: 100%;
@@ -121,19 +184,20 @@ footer ul li:nth-child(3) a:before {
 .welcome {
 	float: left;
 	width: 65%;
+	min-width: 250px;
 	background: url("../img/lined_paper.png");
 	background-color: rgba(255, 255, 255, .85);
 	padding: 20px;
 	border-radius: 10px;
 }
-.process {
+.processContact, .processNumber {
 	float: left;
 	width: 65%;
 	background: url("../img/lined_paper.png");
 	padding: 20px;
 	border-radius: 10px;
 }
-.process p {
+.processContact p, .processNumber p {
 	background-color: red;
 	padding: 20px;
 }
@@ -144,11 +208,12 @@ footer ul li:nth-child(3) a:before {
 		bottom: 0;
 	   	width: 65%;
 	}
+
 }
-@media (max-width: 940px) {
+@media (max-width: 1240px) {
 	nav{
 		float: left;
-		margin-left: 10px;
+		margin-left: 0;
 	}
 	nav ul li {
 		float: left;

@@ -17,7 +17,7 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
-<body>
+<body class="<?php echo $bodyBG; ?>">
 	<div class="container">		
 		<header>
 			<div class="logo">
@@ -27,6 +27,7 @@
 				<ul>
 				  <li class="about <?php if ($section == "about") {echo "on"; } ?>"><a href="about.php">About</a></li>
 				  <li class="contact <?php if ($section == "contact") {echo "on"; } ?>"><a href="contact.php">Contact</a></li>
+				  <li class="assignments <?php if ($section == "assignments") {echo "on"; } ?>"><a href="assignments.php">Assignments</a></li>
 				</ul>
 			</nav>
 			<h1><?php echo $pageTitle; ?></h1>		

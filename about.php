@@ -1,6 +1,7 @@
 <?php 
 $pageTitle = "About Me";
 $section = "about";
+$bodyBG = "aboutBodyBg";
 include('inc/header.php'); ?>
 <article>
   <div class="welcome">

@@ -2,9 +2,10 @@
 <?php 
 $pageTitle = "Contact Me";
 $section = "contact";
+$bodyBG = "contactBodyBg";
 include('inc/header.php'); 
 ?>
-<form name="contactInfo" id="contactInfo" action="process.php" method="post" onsubmit="return validateForm()">
+<form name="contactInfo" id="contactInfo" class="contactinfo" action="process.php" method="post" onsubmit="return validateForm()">
   <fieldset>
     <legend>Contact Information</legend>
     <label for="name"><strong>Please enter your full name: </strong><input type="text" name="ContactName" size="" ></label><br />
