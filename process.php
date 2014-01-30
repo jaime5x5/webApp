@@ -45,7 +45,7 @@ if (!is_null($name) && !is_null($email) && !is_null($gender) && !is_null($positi
             print "<p><strong>Your gender is: </strong>" . $row['gender'] . "</p>";
             print "<p><strong>Your class status is: </strong>" . $row['position'] . "</p>";
             print "<p><strong>Your notes are: </strong>" . $row['notes'] . "</p>";
-            print "<p><strong>Code is available at: </strong><a href=\"https://github.com/jaime5x5/webApp\">CODEPEN</a></p>";
+            print "<p><strong>Code is available at: </strong><a href=\"https://github.com/jaime5x5/webApp\">GitHub</a></p>";
             print "</div>";
       }
     }
@@ -57,11 +57,11 @@ else if (!is_null($thenumber)) {
       $val = "true";
       print "<p><strong>Your number is numeric: </strong>" . $val . "</p>";
       print "<p><strong>Your number is: </strong>" . $thenumber . "</p>";
-      print "<p><strong>Code is available at: </strong><a href=\"https://github.com/jaime5x5/webApp\">CODEPEN</a></p>";
+      print "<p><strong>Code is available at: </strong><a href=\"https://github.com/jaime5x5/webApp\">GitHub</a></p>";
     }
     else if(!is_numeric($thenumber)){
       print "<p><strong>Your number is not numeric! </strong>" . $thenumber . "</p>";
-      print "<p><strong>Code is available at: </strong><a href=\"https://github.com/jaime5x5/webApp\">CODEPEN</a></p>";
+      print "<p><strong>Code is available at: </strong><a href=\"https://github.com/jaime5x5/webApp\">GitHub</a></p>";
     }
     
     print "</div>";

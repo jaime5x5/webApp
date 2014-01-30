@@ -21,3 +21,20 @@
 [25-Jan-2014 22:22:48 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
 [25-Jan-2014 22:24:07 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
 [26-Jan-2014 00:26:49 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 01:12:37 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 01:13:00 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 01:19:35 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 01:20:47 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 01:48:21 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 09:29:58 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 09:31:17 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 09:31:17 America/Denver] PHP Notice:  Undefined variable: thenumber in /home7/devfoudo/public_html/webApp/process.php on line 37
+[26-Jan-2014 09:32:27 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 09:52:19 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 19:18:37 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 19:18:42 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[26-Jan-2014 19:18:47 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[27-Jan-2014 12:56:57 America/Denver] PHP Notice:  Undefined variable: name in /home7/devfoudo/public_html/webApp/process.php on line 29
+[29-Jan-2014 15:04:30 America/Denver] PHP Warning:  mysqli_connect(): (HY000/1129): Host 'box706.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home7/devfoudo/public_html/webApp/Database.class.php on line 32
+[29-Jan-2014 15:08:04 America/Denver] PHP Warning:  mysqli_connect(): (HY000/1129): Host 'box706.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home7/devfoudo/public_html/webApp/Database.class.php on line 32
+[29-Jan-2014 15:21:58 America/Denver] PHP Warning:  mysqli_connect(): (HY000/1129): Host 'box706.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home7/devfoudo/public_html/webApp/Database.class.php on line 32
