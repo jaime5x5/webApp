@@ -52,16 +52,7 @@ nav{
 	width: 350px;
 	background: url("../img/lined_paper.png");
 	background-color: white;
-	margin-top: 15%;
-}
-
-.asgn4form {
-	float: left;
-	width: 350px;
-	background: url("../img/lined_paper.png");
-	background-color: white;
-	margin-top: 2em;
-	margin-bottom: 2em;
+	margin-top: 5%;
 }
 .assignments4 img {
 	width: 75%;
@@ -205,8 +196,19 @@ footer ul li:nth-child(4) a:before {
 	border-radius: 10px;
 }
 .processContact p, .processNumber p {
-	background-color: red;
+	background-color: rgba(127, 0, 0, 0.7);
+	border-radius: 15px;
 	padding: 20px;
+}
+
+#honeypot {
+	display: none;
+}
+/*shadow was originally on http://css-tricks.com/snippets/css/css-box-shadow/*/
+.shadow > p {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
 }
 
 @media (min-width: 1240px) {

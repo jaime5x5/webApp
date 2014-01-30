@@ -11,3 +11,8 @@ Process post info and display.
 
 AS#4
 Process number data. Added assignments page and links. Needs a dropdown menu for assignments.
+
+1-29-14
+Added field to contact. Hooked contact to db. Added management as point to use/extend Database funtions and attributes.
+Restyled a little but it is rough still. Added link to GitHub so graders/instructors/classmates can see code.
+jdw
