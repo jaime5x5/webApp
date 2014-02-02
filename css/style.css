@@ -57,6 +57,13 @@ nav{
 .assignments4 img {
 	width: 75%;
 }
+.movies td {
+	padding: 10px;
+}
+.processMovies label {
+	padding: 10px;
+	margin: 40px;
+}
 legend {
 	color: #1A1A1A;
 	font-size: 2em;

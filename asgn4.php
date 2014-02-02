@@ -9,7 +9,7 @@ include('inc/header.php'); ?>
     <p>For assignment 4</p>
     <figure class="<?php echo $section .= "4"; ?>">
 		<img src="img/asgn4webApp.png" alt="Assignment 4">	
-		<figcaption>Caption for the awesome picture</figcaption>
+		<figcaption>Assignment 4</figcaption>
 	</figure>
 	<form name="processnumber" id="asgn4Form" class="asgn4form" action="process.php" method="post" onsubmit="return validate()">
 			<label for="number">Enter a Number</label><br />

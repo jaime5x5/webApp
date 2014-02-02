@@ -1,7 +1,8 @@
 
 <?php
 require('management.php');
-$thenumber = $name = $email = $gender = $position = $notes = NULL;
+$thenumber = $name = $email = $gender = $position = $notes = $title = $year = $studio = $price = NULL; 
+ 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
       if (isset($_POST["contactname"]) && isset($_POST["email"]) && isset($_POST["gender"]) && isset($_POST["position"]) && isset($_POST["contactNotes"])){
         $name = test_input($_POST["contactname"]);
@@ -16,6 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else if (isset($_POST["thenumber"])){
       $thenumber =  test_input($_POST["thenumber"]);
     }
+}
+else if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+        $title = test_input($_POST["title"]);
+        $year =  test_input($_POST["year"]);
+        $studio =  test_input($_POST["studio"]);
+        $price =  test_input($_POST["price"]);
+        $created_at= '';
+        $updated_at= '';
 }
 function test_input($data)
   {
@@ -34,11 +43,10 @@ include('inc/header.php');
 <article>
 <?php 
 if (!is_null($name) && !is_null($email) && !is_null($gender) && !is_null($position) && !is_null($notes)) {
-    $showLast = '';
     $commentsPosted = $management->mDb->Query( "SELECT * FROM  " . DB_NAME . " . contacts"  . " ORDER BY id DESC LIMIT 0,1");
     if($commentsPosted) {
       while ( $row = mysqli_fetch_assoc($commentsPosted)){
-            print " <div class=\"comment-response\">\n";
+            print "<div class=\"comment-response\">\n";
             print "<div class=\"welcome processContact shadow\">";
             print "<h1><strong>Results </strong>"  . $row['name'] . "</h1>";
             print "<p><strong>Your email is: </strong>" . $row['email'] . "</p>";

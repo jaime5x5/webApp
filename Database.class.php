@@ -170,7 +170,7 @@ class Database {
 			}
 			
 			//Debug code, print the SQL statement out
-			//echo "<h2>" . $str . "</h2>";
+			echo "<h2>" . $str . "</h2>";
 			
 			return mysqli_query( $this->db, $str );
 		}

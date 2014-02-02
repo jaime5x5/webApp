@@ -11,6 +11,7 @@ include('inc/header.php'); ?>
     	<li><a href="http://dev4dollars.com/phpinfo.php">Assignment 2</a></li>
     	<li><a href="contact.php">Assignment 3</a></li>
     	<li><a href="asgn4.php">Assignment 4</a></li>
+    	<li><a href="movies.php">Assignment 5</a></li>
     </ul>
   </div>
 
