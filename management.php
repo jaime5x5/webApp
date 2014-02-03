@@ -9,7 +9,7 @@
 	
 
 class Management {
-	public $id;
+	public $id; // = '';
 	public $name; // = '';
 	public $email; // = '';
 	public $gender; // = '';
@@ -55,12 +55,7 @@ class Management {
 		// Set created_at/updated_at to right now
 		$date = (string)date('Y-m-d h:i:s', time());
 
-		return $this->mDb->Query(
-			"INSERT INTO " . DB_NAME . " . movies ( id, title, year, studio, price, created_at, updated_at) " . 
-			"VALUES ('" .$id . "', '" .$title . "', '" .$year . "', '" .$studio . "', '" .$price . "', '" .
-			$date . "', '" .
-			$date . "');"
-		);
+		return $this->mDb->Query( "DELETE FROM  `movies` WHERE  `id` =" . $_POST["movie_id"]);
 	}
 	public function deleteMovie($id, $title, $year, $studio, $price) {
 
@@ -77,8 +72,5 @@ class Management {
 			$date . "');"
 		);
 	}
-
-
-
 }
 $management = new Management();	

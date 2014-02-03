@@ -14,24 +14,30 @@ include('inc/header.php');
 	</figure> -->
  <?php 
 include('management.php');
-$id = $title = $year = $studio = $price = NULL;
+// $id = $title = $year = $studio = $price = NULL;
+
+// mysqli_query($con,"UPDATE Persons SET Age=36
+// WHERE FirstName='Peter' AND LastName='Griffin'");
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        //$id = test_input($_POST["id"]);
+        // $id = test_input($_POST["id"]);
 		$title = test_input($_POST["title"]);
 		$year =  test_input($_POST["year"]);
 		$studio =  test_input($_POST["studio"]);
 		$price =  test_input($_POST["price"]);
 		$created_at= '';
 		$updated_at= '';
-		if ($_POST['title'] !== "" ) {
-			$management->addMovie( $title, $year, $studio, $price);
-		}
-        else if (isset($_POST["editbutton"])){
-            $management->editMovie( $id, $title, $year, $studio, $price);
-        }
-        else if (isset($_POST["deletebutton"])){
-            $management->deleteMovie( $id, $title, $year, $studio, $price);
-        }
+        var_dump($_POST);
+        // if ($_POST["save"] === "SAVE"){
+        //     $management->mDb->Query( "INSERT INTO `movies` WHERE  `id` =" . $_POST["movie_id"]);
+        // }
+        // else if ($_POST["delete"] === "DELETE"){
+        //     $management->mDb->Query( "DELETE * FROM `movies` WHERE  `id` =" . $_POST["movie_id"]);
+        // }
+        // else {
+        //     $management->addMovie( $title, $year, $studio, $price);
+        //     //echo "bad";
+        // }
 					
 }
 function test_input($data){

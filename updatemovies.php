@@ -39,7 +39,7 @@ else if (isset($_POST["deletebutton"])){
     print "<form name=\"movieform\" id=\"movieForm\" class=\"movieform\" action=\"movies.php\" method=\"post\" onsubmit=\"return validateForm()\">";
     print "<fieldset>";
         print "<legend>Delete Movie</legend>";
-        $result = $management->mDb->Query( "SELECT * FROM  `movies` WHERE  `id` =" . $_POST["movie_id"]);
+        $result = $management->mDb->Query( "SELECT * FROM `movies` WHERE  `id` =" . $_POST["movie_id"]);
         $row = mysqli_fetch_assoc($result);
         print "<label for=\"title\"><strong>Title: </strong><input type=\"text\" name=\"title\" value=\"" . $row["title"] . "\"  size=\"\" ></label><br />";
         print "<label for=\"year\"><strong>Year: </strong><input type=\"text\" name=\"year\" value=\"" . $row["year"] . "\"  size=\"\" ></label><br />";
