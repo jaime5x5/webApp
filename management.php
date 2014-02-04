@@ -1,12 +1,10 @@
 <?php
 	require('Database.class.php');
 
-	define( "DB_HOST", "192.168.1.7" );
-	define( "DB_NAME", "webapp" );
-	define( "DB_USER", "root" );
-	define( "DB_PASS", "txrx5x5" );
-
-	
+	define( "DB_HOST", "localhost" );
+	define( "DB_NAME", "devfoudo_webapp" );
+	define( "DB_USER", "devfoudo_jaime" );
+	define( "DB_PASS", "hk@7g.QUKn40" );
 
 class Management {
 	public $id; // = '';
@@ -43,23 +41,29 @@ class Management {
 		// Set created_at/updated_at to right now
 		$date = (string)date('Y-m-d h:i:s', time());
 
-		return $this->mDb->Query(
-			"INSERT INTO " . DB_NAME . " . movies (title, year, studio, price, created_at, updated_at) " . 
-			"VALUES ('" .$title . "', '" .$year . "', '" .$studio . "', '" .$price . "', '" .
-			$date . "', '" .
-			$date . "');"
-		);
+		return $this->mDb->Insert( "movies",
+			array('title', 'year', 'studio', 'price', 'created_at', 'updated_at'),
+			array($title, $year, $studio, $price, $date, $date) );
 	}
 
 	public function editMovie( $id, $title, $year, $studio, $price) {
 		// Set created_at/updated_at to right now
 		$date = (string)date('Y-m-d h:i:s', time());
 
-		return $this->mDb->Query( "DELETE FROM  `movies` WHERE  `id` =" . $_POST["movie_id"]);
+		return $this->mDb->Query(
+			"UPDATE " . DB_NAME . ".movies" . 
+			" SET " . " id='" . $id . 
+			 "', " . "	title='" . $title . 
+			 "', " . " year='" . $year . 
+			 "', " . " studio ='". $studio . 
+			 "', " . " price='" . $price .
+			 "', " . " created_at='" . $date .
+			 "', " . " updated_at='" . $date .
+			"' WHERE " . " id ='". $id . "'"
+		);
 	}
-	public function deleteMovie($id, $title, $year, $studio, $price) {
-
-		return $this->mDb->Delete('"movies "', '"id ="' . '"$_POST["movie_id"]"');
+	public function deleteMovie($id) {
+		return $this->mDb->Delete("movies", "id=" . $id);
 	}
 	public function showMovie( $title, $year, $studio, $price) {
 		// Set created_at/updated_at to right now

@@ -8,16 +8,15 @@ include('inc/header.php');
   <div class="welcome processMovies shadow">
     <h1>Assignment 5</h1>
     <p>For assignment 5</p>
-<!--     <figure class="<?php echo $section; ?>">
+    <figure class="<?php echo $section; ?>">
         <img src="img/asgn5webApp.png" alt="Assignment 5">  
         <figcaption>Assignment 5</figcaption>
-    </figure> -->
+    </figure>
  <?php 
 include('management.php');
-// var_dump($_POST);
 if (isset($_POST["editbutton"])){
     print "<div class=\"welcome processMovies shadow\">\n";
-    print "<form name=\"movieform\" id=\"movieForm\" class=\"movieform\" action=\"movies.php\" method=\"post\" onsubmit=\"return validateForm()\">";
+    print "<form name=\"movieform\" id=\"movieForm\" class=\"movieform\" action=\"baseform.php\" method=\"post\" onsubmit=\"return validateForm()\">";
     print "<fieldset>";
         print "<legend>Edit Movie</legend>";
         $result = $management->mDb->Query( "SELECT * FROM  `movies` WHERE  `id` =" . $_POST["movie_id"]);
@@ -27,16 +26,16 @@ if (isset($_POST["editbutton"])){
         print "<label for=\"studio\"><strong>Studio: </strong><input type=\"text\" name=\"studio\" value=\"" . $row["studio"] . "\" size=\"\" ></label><br />";
         print "<label for=\"price\"><strong>Price: </strong><input type=\"text\" name=\"price\" value=\"" . $row["price"] . "\" size=\"\" ></label><br />";
         print "<input type=\"text\" name=\"other\" size=\"0\" id=\"honeypot\">";
-        print "<input type=\"submit\" value=\"SAVE\" name=\"save\">";
-        print "<input type=\"submit\" value=\"CANCEL\" name=\"cancel\">";
-
-      print "</fieldset>";
+        print "<input type=\"hidden\" value=\"" . $row['id'] . "\" name=\"movie_id\">";
+        print "<input type=\"submit\" value=\"SAVE\" name=\"edit\" onclick=\"return confirm('Are you sure?');\">";
+        print "<input type=\"submit\" value=\"CANCEL\" name=\"cancel\" onclick=\"return confirm('Are you sure?');\">";
+    print "</fieldset>";
     print "</form>";
     print "</div>";
 }
 else if (isset($_POST["deletebutton"])){
     print "<div class=\"welcome processMovies shadow\">\n";
-    print "<form name=\"movieform\" id=\"movieForm\" class=\"movieform\" action=\"movies.php\" method=\"post\" onsubmit=\"return validateForm()\">";
+    print "<form name=\"movieform\" id=\"movieForm\" class=\"movieform\" action=\"baseform.php\" method=\"post\" onsubmit=\"return validateForm()\">";
     print "<fieldset>";
         print "<legend>Delete Movie</legend>";
         $result = $management->mDb->Query( "SELECT * FROM `movies` WHERE  `id` =" . $_POST["movie_id"]);
@@ -46,15 +45,16 @@ else if (isset($_POST["deletebutton"])){
         print "<label for=\"studio\"><strong>Studio: </strong><input type=\"text\" name=\"studio\" value=\"" . $row["studio"] . "\"  size=\"\" ></label><br />";
         print "<label for=\"price\"><strong>Price: </strong><input type=\"text\" name=\"price\" value=\"" . $row["price"] . "\"  size=\"\" ></label><br />";
         print "<input type=\"text\" name=\"other\" size=\"0\" id=\"honeypot\">";
-        print "<input type=\"submit\" value=\"DELETE\" name=\"delete\">";
-        print "<input type=\"submit\" value=\"CANCEL\" name=\"cancel\">";
+        print "<input type=\"hidden\" value=\"" . $row['id'] . "\" name=\"movie_id\">";
+        print "<input type=\"submit\" value=\"DELETE\" name=\"delete\" onclick=\"return confirm('Are you sure?');\">";
+        print "<input type=\"submit\" value=\"CANCEL\" name=\"cancel\" onclick=\"return confirm('Are you sure?');\">";
       print "</fieldset>";
     print "</form>";
     print "</div>";
 }
 else {
     print "<div class=\"welcome processMovies shadow\">\n";
-    print "<form name=\"movieform\" id=\"movieForm\" class=\"movieform\" action=\"movies.php\" method=\"post\" onsubmit=\"return validateForm()\">";
+    print "<form name=\"movieform\" id=\"movieForm\" class=\"movieform\" action=\"baseform.php\" method=\"post\" onsubmit=\"return validateForm()\">";
     print "<fieldset>";
         print "<legend>Add Movie</legend>";
         print "<label for=\"title\"><strong>Title: </strong><input type=\"text\" name=\"title\" size=\"\" placeholder=\"\"></label><br />";
