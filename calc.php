@@ -133,7 +133,7 @@ if(isset($_POST["btnSubmit"])) {
 }
 ?>
 <article>
-  <div class="welcome processMovies shadow">
+  <div class="welcome">
     <h1>Assignment 6</h1>
     <p>For assignment 6</p>
 <!--     <figure class="<?php echo $section; ?>">
