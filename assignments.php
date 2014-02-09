@@ -12,6 +12,7 @@ include('inc/header.php'); ?>
     	<li><a href="contact.php">Assignment 3</a></li>
     	<li><a href="asgn4.php">Assignment 4</a></li>
     	<li><a href="baseform.php">Assignment 5</a></li>
+        <li><a href="calc.php">Assignment 6</a></li>
     </ul>
   </div>
 
