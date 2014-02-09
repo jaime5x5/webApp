@@ -4,7 +4,7 @@
 	define( "DB_HOST", "localhost" );
 	define( "DB_NAME", "devfoudo_webapp" );
 	define( "DB_USER", "devfoudo_jaime" );
-	define( "DB_PASS", "hk@7g.QUKn40" );
+	define( "DB_PASS", "" );
 
 class Management {
 	public $id; // = '';
