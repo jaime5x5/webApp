@@ -16,3 +16,14 @@ Process number data. Added assignments page and links. Needs a dropdown menu for
 Added field to contact. Hooked contact to db. Added management as point to use/extend Database funtions and attributes.
 Restyled a little but it is rough still. Added link to GitHub so graders/instructors/classmates can see code.
 jdw
+
+AS#5
+This is a hot mess. added to management, utlizes db class had to include baseform and update. Seems to work alright.
+
+AS#6
+2/8/14
+for square root hit sqrt btn the numer then =.
+for % add subtract work * and / are sketchy.
+Sucks for mobile always retuns to head of page.
+What a bandwidth pig using session.
+jdw 

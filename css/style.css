@@ -222,8 +222,11 @@ footer ul li:nth-child(4) a:before {
   box-shadow:         3px 3px 5px 6px #ccc;
 }
 .defButton {
-	min-width: 45px;
+	min-width: 27px;
 	margin-bottom: 1.2em;
+}
+.display {
+	text-align: right;
 }
 @media (min-width: 1240px) {
 	footer {
